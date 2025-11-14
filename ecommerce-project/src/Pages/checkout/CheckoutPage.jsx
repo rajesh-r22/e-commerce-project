@@ -1,9 +1,11 @@
+import { Link } from 'react-router';
 import './CheckoutHeader.css';
 import './CheckoutPage.css';
 export function CheckoutPage() {
     return (
         <>
             <title>Checkout</title>
+            <link rel="icon" type="image/svg+xml" href="cart-favicon.png" />
             <div className="checkout-header">
                 <div className="header-content">
                     <div className="checkout-header-left-section">
@@ -14,8 +16,8 @@ export function CheckoutPage() {
                     </div>
 
                     <div className="checkout-header-middle-section">
-                        Checkout (<a className="return-to-home-link"
-                            to="/">3 items</a>)
+                        Checkout (<Link className="return-to-home-link"
+                            to="/">3 items</Link>)
                     </div>
 
                     <div className="checkout-header-right-section">
