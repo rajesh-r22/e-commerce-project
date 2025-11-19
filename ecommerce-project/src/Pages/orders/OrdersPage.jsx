@@ -1,10 +1,9 @@
 import axios from 'axios';
-import  dayjs from 'dayjs';
-import { formatMoney } from '../utils/money'
+import dayjs from 'dayjs';
+import { formatMoney } from '../../utils/money'
 import { useState, useEffect, Fragment } from 'react'
-
 import { Link } from 'react-router';
-import { Headers } from '../Components/Headers';
+import { Headers } from '../../Components/Headers';
 import './OrdersPage.css';
 
 
@@ -61,13 +60,13 @@ export function OrdersPage({ cart }) {
 
                                                 <div className="product-details">
                                                     <div className="product-name">
-                                                       {orderProduct.product.name}
+                                                        {orderProduct.product.name}
                                                     </div>
                                                     <div className="product-delivery-date">
                                                         Arriving on:{dayjs(orderProduct.estimatedDeliveryTimeMs).format('MMMM D')}
                                                     </div>
                                                     <div className="product-quantity">
-                                                        Quantity: { orderProduct.quantity}
+                                                        Quantity: {orderProduct.quantity}
                                                     </div>
                                                     <button className="buy-again-button button-primary">
                                                         <img className="buy-again-icon" src="images/icons/buy-again.png" />
@@ -86,12 +85,12 @@ export function OrdersPage({ cart }) {
                                             </Fragment>
                                         )
                                     })}
-                                
+
                                 </div>
                             </div>
                         )
                     })}
-                    
+
                 </div>
             </div>
         </>
