@@ -19,7 +19,7 @@ export function CheckoutPage({ cart }) {
             .then((response) => {
                 setDeliveryOptions(response.data);
             })
-        axios.get('api/payment-summary')
+        axios.get('/api/payment-summary')
             .then((response) => {
                 setPaymentSummary(response.data);
             })

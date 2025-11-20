@@ -3,7 +3,7 @@ import { formatMoney } from '../../utils/money'
 import { DeliveryOptions} from './deliveryOptions'
 
 
-export function OrderSummary({ deliveryOptions, cart }) {
+export function OrderSummary({cart ,deliveryOptions}) {
     return (
         <div className="order-summary">
             {/* if statement to check if if deliveryoptions are present then proced further */}
@@ -44,7 +44,7 @@ export function OrderSummary({ deliveryOptions, cart }) {
                                     </span>
                                 </div>
                             </div>
-                            <DeliveryOptions />
+                            <DeliveryOptions  cartItem={cartItem} deliveryOptions={deliveryOptions} />
 
                         </div>
                     </div>
