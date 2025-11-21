@@ -15,7 +15,6 @@ export function Product({ product, loadCart }) {
     const selectQuantity=(event) => {
                     const quantitySelected = Number(event.target.value);
                     setQuantity(quantitySelected);
-                    console.log(quantitySelected);
                 }
 
     return (

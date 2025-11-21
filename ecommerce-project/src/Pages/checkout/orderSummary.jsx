@@ -3,7 +3,7 @@ import {CartItemDetails} from './CartItemDetails';
 import { DeliveryOptions} from './deliveryOptions';
 
 
-export function OrderSummary({cart ,deliveryOptions}) {
+export function OrderSummary({cart ,deliveryOptions, loadCart}) {
     return (
         <div className="order-summary">
             {/* if statement to check if if deliveryoptions are present then proced further */}
@@ -19,7 +19,7 @@ export function OrderSummary({cart ,deliveryOptions}) {
 
                             <CartItemDetails cartItem={cartItem}/>
 
-                            <DeliveryOptions  cartItem={cartItem} deliveryOptions={deliveryOptions} />
+                            <DeliveryOptions  cartItem={cartItem} deliveryOptions={deliveryOptions} loadCart={loadCart}/>
 
                         </div>
                     </div>
