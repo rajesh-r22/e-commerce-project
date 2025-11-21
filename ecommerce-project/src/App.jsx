@@ -7,6 +7,7 @@ import { OrdersPage } from './Pages/orders/OrdersPage';
 import { TrackingPage } from './Pages/TrackingPage';
 
 import './App.css'
+window.axios = axios;
 
 function App() {
   const [cart, setCart] = useState([])
