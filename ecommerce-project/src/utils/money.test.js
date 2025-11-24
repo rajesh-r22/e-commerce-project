@@ -8,8 +8,14 @@ describe('formatMoney', () => {
 
     it('displays 2 decimals', () => {
         expect(formatMoney(1000)).toBe('$10.00');
-        expect(formatMoney(1008)).toBe('$10.08')
+        expect(formatMoney(1008)).toBe('$10.08');
+        expect(formatMoney(0)).toBe('$0.00');
     });
+
+    it('checking for negative numbers',()=>{
+        expect(formatMoney(-999)).toBe('$-9.99');
+        expect(formatMoney(-100)).toBe('$-1.00')
+    })
 })
 
 
