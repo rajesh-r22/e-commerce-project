@@ -55,6 +55,8 @@ describe('Product Component', () => {
         expect(
             screen.getByText('87')
         ).toBeInTheDocument();
+
+         
     });
 
     it('adds a product to add to cart ', async () => {
@@ -76,5 +78,11 @@ describe('Product Component', () => {
 
         expect(loadCart).toHaveBeenCalled();
     });
+
+    it('selects a quantity',()=>{
+        render(<Product product={product} loadCart={loadCart}/>)
+        const quantitySelector =  screen.getByTestId('product-quantity-selector');
+        expect(quantitySelector).toHaveValue('1');
+    })
 
 })
